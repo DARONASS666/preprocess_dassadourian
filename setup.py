@@ -8,7 +8,7 @@ with open('README.md' , 'r') as file:
 
 setuptools.setup(
 	name = 'preprocess_dassadourian', #this should be unique
-	version = '0.0.3',
+	version = '0.0.4',
 	author = 'Daron Assadourian',
 	author_email = 'daron_1997@hotmail.com',
 	description = 'This is a preprocessing package',
