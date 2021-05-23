@@ -1,6 +1,6 @@
 from preprocess_dassadourian import utils
 
-__version__ = '0.0.4'
+__version__ = '0.0.5'
 
 def get_wordcounts(x):
 	return utils._get_wordcounts(x)
@@ -14,6 +14,7 @@ def get_avg_wordlength(x):
 def get_stopwords_counts(x):
 	return utils._get_stopwords_counts(x)
 
+
 def get_hashtag_counts(x):
 	return utils._get_hashtag_counts(x)
 
@@ -26,8 +27,8 @@ def get_digit_counts(x):
 def get_uppercase_counts(x):
 	return utils._get_uppercase_counts(x)
 
-def get_cont_exp(x):
-	return utils._get_cont_exp(x)
+def cont_exp(x):
+	return utils._cont_exp(x)
 
 def get_emails(x):
 	return utils._get_emails(x)
@@ -35,7 +36,7 @@ def get_emails(x):
 def remove_emails(x):
 	return utils._remove_emails(x)
 
-def get_urls(x):
+def get_urls():
 	return utils._get_urls(x)
 
 def remove_urls(x):
@@ -53,20 +54,22 @@ def remove_html_tags(x):
 def remove_accented_chars(x):
 	return utils._remove_accented_chars(x)
 
-def remove_stopwords(x):
-	return utils._remove_stopwords(x)
 
-def convert_to_base(x):
-	return utils._convert_to_base(x)
+def remove_stopwords(x):
+	return utils.remove_stopwords(x)
+
+def make_base(x):
+	return utils._make_base(x)
 
 def get_value_counts(df, col):
 	return utils._get_value_counts(df, col)
 
-def remove_common_words(x,freq, n=20):
-	return utils._remove_common_words(x,freq, n)
+def remove_common_words(x, freq, n=20):
+	return utils._remove_common_words(x, freq, n)
 
 def remove_rarewords(x, freq, n=20):
-	return utils._remove_rarewords(x,freq, n)
+	return utils._remove_rarewords(x, freq, n)
 
 def spelling_correction(x):
 	return utils._spelling_correction(x)
+
