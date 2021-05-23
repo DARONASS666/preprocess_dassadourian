@@ -198,13 +198,13 @@ def _get_value_counts(df, col):
 	freq = pd.Series(text).value_counts()
 	return freq 
 
-def _remove_common_words(x,freq n=20):
+def _remove_common_words(x,freq, n=20):
 	fn = freq_comm[:n]
 
 	x = ' '.join([t for t in x.split() if t not in fn])
 	return x
 
-def _remove_rarewords(x,freq n=20):
+def _remove_rarewords(x,freq, n=20):
 	fn = freq.tail(n)
 
 	x = ' '.join([t for t in x.split() if t not in fn])
