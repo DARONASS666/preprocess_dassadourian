@@ -1,6 +1,6 @@
 from preprocess_dassadourian import utils
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 def get_wordcounts(x):
 	return utils._get_wordcounts(x)
@@ -59,11 +59,14 @@ def remove_stopwords(x):
 def convert_to_base(x):
 	return utils._convert_to_base(x)
 
-def remove_common_words(x, n=20):
-	return utils._remove_common_words(x, n=20)
+def get_value_counts(df, col):
+	return utils._get_value_counts(df, col)
 
-def remove_rarewords(x, n=20):
-	return utils._remove_rarewords(x, n=20)
+def remove_common_words(x,freq, n=20):
+	return utils._remove_common_words(x,freq, n)
+
+def remove_rarewords(x, freq, n=20):
+	return utils._remove_rarewords(x,freq, n)
 
 def spelling_correction(x):
 	return utils._spelling_correction(x)
