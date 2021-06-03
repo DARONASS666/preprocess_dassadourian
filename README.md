@@ -28,7 +28,7 @@ def get_clean(x):
     x = re.sub("(.)\\1{2,}", "\\1", x)
     return x
     
-Use this if you want to use one by one
+# Use this if you want to use one by one
 
 import pandas as pd
 import numpy as np
@@ -37,7 +37,7 @@ import preprocess_dassadourian as pp
 df = pd.read_csv('imdb_reviews.txt', sep = '\t', header = None)
 df.columns = ['reviews', 'sentiment']
 
-# These are series of preprocessing
+### These are series of preprocessing
 df['reviews'] = df['reviews'].apply(lambda x: pp.cont_exp(x)) #you're -> you are; i'm -> i am
 df['reviews'] = df['reviews'].apply(lambda x: pp.remove_emails(x))
 df['reviews'] = df['reviews'].apply(lambda x: pp.remove_html_tags(x))
